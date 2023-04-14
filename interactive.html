@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Interactive Chart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://fonts.cdnfonts.com/css/graphik" rel="stylesheet">
+  <link rel="stylesheet" href="tv23-interactive.css">
+</head>
+
+<body class="bg-black m-0 p-0">
+
+<input type="checkbox" id="light-mode" style="position:fixed;right:0;padding:20px;display:block;width:30px;height:30px;cursor:pointer;margin:20px;z-index:999999;">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+
+
+      <div class="container content-holder mt-5 pt-5">
+        <div class="row mb-3">
+          <div class="col-md-8 offset-md-2">
+            <h1 class="text-center text-white">Investment by industry – resourcing in the next 5 years</h1>
+          </div>
+        </div>
+
+        <div class="row d-flex align-items-center gx-5">
+          <div class="col-md-5">
+            <p class="text-white">Our global research reveals how executives across different industries are significantly increasing their dedicated resources for innovation and emerging tech.</p>
+
+            <p class="ff-setra mb-4">We asked “What change do you anticipate making in the level of resources (time, money, human capital, etc.) that your organization dedicates to the following emerging areas of innovation and technologies in the next 3 to 5 years?”</p>
+
+            <h3 class="dropdown-h3-title fs-medium mb-2 mt-3 text-white d-none">COMPARE:</h3>
+            <div class="dropdown-holder-box d-flex">
+              <div class="select-industry-dropdown custom-dropdown ">
+                <select>
+                  <option selected="">Select your Industry:</option>
+                  <option value="Global">Global</option>
+                  <option value="Aerospace &amp; Defense">Aerospace &amp; Defense</option>
+                  <option value="Auto">Auto</option>
+                  <option value="Banking">Banking</option>
+                  <option value="Biopharma">Biopharma</option>
+                  <option value="Capital Markets">Capital Markets</option>
+                  <option value="Chemicals">Chemicals</option>
+                  <option value="Comms">Comms</option>
+                  <option value="Consumer Goods &amp; Services">Consumer Goods &amp; Services</option>
+                  <option value="Energy">Energy</option>
+                  <option value="Health">Health</option>
+                  <option value="High Tech">High Tech</option>
+                  <option value="Industrial Goods &amp; Equipment">Industrial Goods &amp; Equipment</option>
+                  <option value="Insurance">Insurance</option>
+                  <option value="Media &amp; Entertainment">Media &amp; Entertainment</option>
+                  <option value="MedTech">MedTech</option>
+                  <option value="Natural Resources">Natural Resources</option>
+                  <option value="Public Service">Public Service</option>
+                  <option value="Retail">Retail</option>
+                  <option value="Software &amp; Platforms">Software &amp; Platforms</option>
+                  <option value="Travel">Travel</option>
+                  <option value="Utilities">Utilities</option>
+                </select>
+              <div class="select-selected">Select your Industry:</div><div class="select-items select-hide"><div class="select-items-scroll-container"><div>Global</div><div>Aerospace &amp; Defense</div><div>Auto</div><div>Banking</div><div>Biopharma</div><div>Capital Markets</div><div>Chemicals</div><div>Comms</div><div>Consumer Goods &amp; Services</div><div>Energy</div><div>Health</div><div>High Tech</div><div>Industrial Goods &amp; Equipment</div><div>Insurance</div><div>Media &amp; Entertainment</div><div>MedTech</div><div>Natural Resources</div><div>Public Service</div><div>Retail</div><div>Software &amp; Platforms</div><div>Travel</div><div>Utilities</div></div></div></div>
+            </div>
+
+            <h3 class="dropdown-h3-title fs-medium my-2 text-white d-none">VS:</h3>
+            <div class="dropdown-holder-box d-none">
+              <div class="select-compare-dropdown custom-dropdown">
+                <select>
+                  <option selected="">Please select:</option>
+                  <option value="Global">Global</option>
+                  <option value="Aerospace &amp; Defense">Aerospace &amp; Defense</option>
+                  <option value="Auto">Auto</option>
+                  <option value="Banking">Banking</option>
+                  <option value="Biopharma">Biopharma</option>
+                  <option value="Capital Markets">Capital Markets</option>
+                  <option value="Chemicals">Chemicals</option>
+                  <option value="Comms">Comms</option>
+                  <option value="Consumer Goods &amp; Services">Consumer Goods &amp; Services</option>
+                  <option value="Energy">Energy</option>
+                  <option value="Health">Health</option>
+                  <option value="High Tech">High Tech</option>
+                  <option value="Industrial Goods &amp; Equipment">Industrial Goods &amp; Equipment</option>
+                  <option value="Insurance">Insurance</option>
+                  <option value="Media &amp; Entertainment">Media &amp; Entertainment</option>
+                  <option value="MedTech">MedTech</option>
+                  <option value="Natural Resources">Natural Resources</option>
+                  <option value="Public Service">Public Service</option>
+                  <option value="Retail">Retail</option>
+                  <option value="Software &amp; Platforms">Software &amp; Platforms</option>
+                  <option value="Travel">Travel</option>
+                  <option value="Utilities">Utilities</option>
+                </select>
+              <div class="select-selected">Please select:</div><div class="select-items select-hide"><div class="select-items-scroll-container"><div>Global</div><div>Aerospace &amp; Defense</div><div>Auto</div><div>Banking</div><div>Biopharma</div><div>Capital Markets</div><div>Chemicals</div><div>Comms</div><div>Consumer Goods &amp; Services</div><div>Energy</div><div>Health</div><div>High Tech</div><div>Industrial Goods &amp; Equipment</div><div>Insurance</div><div>Media &amp; Entertainment</div><div>MedTech</div><div>Natural Resources</div><div>Public Service</div><div>Retail</div><div>Software &amp; Platforms</div><div>Travel</div><div>Utilities</div></div></div></div>
+              <span class="align-items-center fs-semibold justify-content-center reset-button">RESET</span>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-7 align-items-center d-flex justify-content-center chart-holder">
+            <h3 class="chart-title text-white position-absolute fs-light">Global</h3>
+            <canvas id="chart" width="752" height="752" style="display: block; box-sizing: border-box; height: 602px; width: 602px;"></canvas>
+          </div>
+        </div>
+
+        <div class="row mt-5 mb-5 pb-5 data-boxes">
+          <div class="col-md-6 col-lg-3 mb-5 position-relative first-compare-box">
+          <div class="close-compare-box d-flex align-items-center text-white d-none position-absolute">
+            Close
+          </div>
+            <div class="compare-box bg-light position-absolute h-100 d-none">
+              <div class="compare-box-scrollbar h-100">
+                <p class="fs-medium" data-attributes="Global"><span>Global</span><span>95%</span></p>
+                <p class="fs-medium" data-attributes="Aerospace &amp; Defense"><span>Aerospace &amp; Defense</span><span>94%</span></p>
+                <p class="fs-medium" data-attributes="Auto"><span>Auto</span><span>91%</span></p>
+                <p class="fs-medium" data-attributes="Banking"><span>Banking</span><span>96%</span></p>
+                <p class="fs-medium" data-attributes="Biopharma"><span>Biopharma</span><span>98%</span></p>
+                <p class="fs-medium" data-attributes="Capital Markets"><span>Capital Markets</span><span>95%</span></p>
+                <p class="fs-medium" data-attributes="Chemicals"><span>Chemicals</span><span>93%</span></p>
+                <p class="fs-medium" data-attributes="Comms"><span>Comms</span><span>98%</span></p>
+                <p class="fs-medium" data-attributes="Consumer Goods &amp; Services"><span>Consumer Goods &amp; Services</span><span>96%</span></p>
+                <p class="fs-medium" data-attributes="Energy"><span>Energy</span><span>97%</span></p>
+                <p class="fs-medium" data-attributes="Health"><span>Health</span><span>98%</span></p>
+                <p class="fs-medium" data-attributes="High Tech"><span>High Tech</span><span>94%</span></p>
+                <p class="fs-medium" data-attributes="Industrial Goods &amp; Equipment"><span>Industrial Goods &amp; Equipment</span><span>93%</span></p>
+                <p class="fs-medium" data-attributes="Insurance"><span>Insurance</span><span>97%</span></p>
+                <p class="fs-medium" data-attributes="Media &amp; Entertainment"><span>Media &amp; Entertainment</span><span>84%</span></p>
+                <p class="fs-medium" data-attributes="MedTech"><span>MedTech</span><span>98%</span></p>
+                <p class="fs-medium" data-attributes="Natural Resources"><span>Natural Resources</span><span>97%</span></p>
+                <p class="fs-medium" data-attributes="Public Service"><span>Public Service</span><span>98%</span></p>
+                <p class="fs-medium" data-attributes="Retail"><span>Retail</span><span>93%</span></p>
+                <p class="fs-medium" data-attributes="Software &amp; Platforms"><span>Software &amp; Platforms</span><span>86%</span></p>
+                <p class="fs-medium" data-attributes="Travel"><span>Travel</span><span>99%</span></p>
+                <p class="fs-medium" data-attributes="Utilities"><span>Utilities</span><span>98%</span></p>
+              </div>
+            </div>
+            <div class="bg-black h-100 p-2">
+              <h2 class="text-purple fs-semibold">95<span class="fs-light">%</span></h2>
+              <p class="text-white">of <span class="fs-bold">global executives</span> agree advancements in generative AI such as GPT-3 are ushering in a new era of enterprise intelligence.</p>
+              <hr>
+              <h3 class="text-white fs-medium mb-3 d-none">COMPARE:</h3>
+
+              <div class="compare-text-box bg-light text-purple position-relative d-none">
+                <p class="fs-medium m-0"></p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-3 mb-5 position-relative second-compare-box">
+            <div class="close-compare-box d-flex align-items-center text-white d-none position-absolute">
+              Close
+            </div>
+            <div class="compare-box bg-light position-absolute h-100 d-none">
+              <div class="compare-box-scrollbar h-100">
+                <p class="fs-medium" data-attributes="Global"><span>Global</span><span>85%</span></p>
+                <p class="fs-medium" data-attributes="Aerospace &amp; Defense"><span>Aerospace &amp; Defense</span><span>76%</span></p>
+                <p class="fs-medium" data-attributes="Auto"><span>Auto</span><span>84%</span></p>
+                <p class="fs-medium" data-attributes="Banking"><span>Banking</span><span>85%</span></p>
+                <p class="fs-medium" data-attributes="Biopharma"><span>Biopharma</span><span>90%</span></p>
+                <p class="fs-medium" data-attributes="Capital Markets"><span>Capital Markets</span><span>80%</span></p>
+                <p class="fs-medium" data-attributes="Chemicals"><span>Chemicals</span><span>86%</span></p>
+                <p class="fs-medium" data-attributes="Comms"><span>Comms</span><span>76%</span></p>
+                <p class="fs-medium" data-attributes="Consumer Goods &amp; Services"><span>Consumer Goods &amp; Services</span><span>84%</span></p>
+                <p class="fs-medium" data-attributes="Energy"><span>Energy</span><span>91%</span></p>
+                <p class="fs-medium" data-attributes="Health"><span>Health</span><span>84%</span></p>
+                <p class="fs-medium" data-attributes="High Tech"><span>High Tech</span><span>91%</span></p>
+                <p class="fs-medium" data-attributes="Industrial Goods &amp; Equipment"><span>Industrial Goods &amp; Equipment</span><span>88%</span></p>
+                <p class="fs-medium" data-attributes="Insurance"><span>Insurance</span><span>88%</span></p>
+                <p class="fs-medium" data-attributes="Media &amp; Entertainment"><span>Media &amp; Entertainment</span><span>83%</span></p>
+                <p class="fs-medium" data-attributes="MedTech"><span>MedTech</span><span>95%</span></p>
+                <p class="fs-medium" data-attributes="Natural Resources"><span>Natural Resources</span><span>90%</span></p>
+                <p class="fs-medium" data-attributes="Public Service"><span>Public Service</span><span>94%</span></p>
+                <p class="fs-medium" data-attributes="Retail"><span>Retail</span><span>86%</span></p>
+                <p class="fs-medium" data-attributes="Software &amp; Platforms"><span>Software &amp; Platforms</span><span>83%</span></p>
+                <p class="fs-medium" data-attributes="Travel"><span>Travel</span><span>82%</span></p>
+                <p class="fs-medium" data-attributes="Utilities"><span>Utilities</span><span>84%</span></p>
+              </div>
+            </div>
+            <div class="bg-black h-100 p-2">
+              <h2 class="text-purple fs-semibold">85<span class="fs-light">%</span></h2>
+              <p class="text-white">of <span class="fs-bold">global executives</span> agree that digital identity is no longer just a “technical issue”; it’s becoming a strategic business imperative for their organizations.</p>
+              <hr>
+              <h3 class="text-white fs-medium mb-3 d-none">COMPARE:</h3>
+
+              <div class="compare-text-box bg-light text-purple position-relative d-none">
+                <p class="fs-medium m-0"></p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-md-6 col-lg-3 mb-5 position-relative third-compare-box">
+            <div class="close-compare-box d-flex align-items-center text-white d-none position-absolute">
+              Close
+            </div>
+            <div class="compare-box bg-light position-absolute h-100 d-none">
+              <div class="compare-box-scrollbar h-100">
+                <p class="fs-medium" data-attributes="Global"><span>Global</span><span>69%</span></p>
+                <p class="fs-medium" data-attributes="Aerospace &amp; Defense"><span>Aerospace &amp; Defense</span><span>59%</span></p>
+                <p class="fs-medium" data-attributes="Auto"><span>Auto</span><span>74%</span></p>
+                <p class="fs-medium" data-attributes="Banking"><span>Banking</span><span>76%</span></p>
+                <p class="fs-medium" data-attributes="Biopharma"><span>Biopharma</span><span>78%</span></p>
+                <p class="fs-medium" data-attributes="Capital Markets"><span>Capital Markets</span><span>63%</span></p>
+                <p class="fs-medium" data-attributes="Chemicals"><span>Chemicals</span><span>72%</span></p>
+                <p class="fs-medium" data-attributes="Comms"><span>Comms</span><span>62%</span></p>
+                <p class="fs-medium" data-attributes="Consumer Goods &amp; Services"><span>Consumer Goods &amp; Services</span><span>76%</span></p>
+                <p class="fs-medium" data-attributes="Energy"><span>Energy</span><span>64%</span></p>
+                <p class="fs-medium" data-attributes="Health"><span>Health</span><span>68%</span></p>
+                <p class="fs-medium" data-attributes="High Tech"><span>High Tech</span><span>66%</span></p>
+                <p class="fs-medium" data-attributes="Industrial Goods &amp; Equipment"><span>Industrial Goods &amp; Equipment</span><span>70%</span></p>
+                <p class="fs-medium" data-attributes="Insurance"><span>Insurance</span><span>80%</span></p>
+                <p class="fs-medium" data-attributes="Media &amp; Entertainment"><span>Media &amp; Entertainment</span><span>58%</span></p>
+                <p class="fs-medium" data-attributes="MedTech"><span>MedTech</span><span>88%</span></p>
+                <p class="fs-medium" data-attributes="Natural Resources"><span>Natural Resources</span><span>79%</span></p>
+                <p class="fs-medium" data-attributes="Public Service"><span>Public Service</span><span>71%</span></p>
+                <p class="fs-medium" data-attributes="Retail"><span>Retail</span><span>72%</span></p>
+                <p class="fs-medium" data-attributes="Software &amp; Platforms"><span>Software &amp; Platforms</span><span>61%</span></p>
+                <p class="fs-medium" data-attributes="Travel"><span>Travel</span><span>66%</span></p>
+                <p class="fs-medium" data-attributes="Utilities"><span>Utilities</span><span>68%</span></p>
+              </div>
+            </div>
+            <div class="bg-black h-100 p-2">
+              <h2 class="text-purple fs-semibold">69<span class="fs-light">%</span></h2>
+              <p class="text-white">of <span class="fs-bold">global executives</span> agree the disruptive impact of science tech will be felt by all industries.</p>
+              <hr>
+              <h3 class="text-white fs-medium mb-3 d-none">COMPARE:</h3>
+
+              <div class="compare-text-box bg-light text-purple position-relative d-none">
+                <p class="fs-medium m-0"></p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-3 mb-5 position-relative fourth-compare-box">
+            <div class="close-compare-box d-flex align-items-center text-white d-none position-absolute">
+              Close
+            </div>
+            <div class="compare-box bg-light position-absolute h-100 d-none">
+              <div class="compare-box-scrollbar  h-100">
+                <div data-attributes="Global">
+                  <h3 class="fs-medium m-0">Global</h3>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="m-0 lh-1">Investors / Shareholders</p>
+                  <p class="lh-1">Government Agencies</p>
+                </div>
+                <div data-attributes="Aerospace &amp; Defense">
+                  <h3 class="fs-medium m-0 m-0">Aerospace &amp; Defense</h3>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="m-0 lh-1">Investors / Shareholders</p>
+                  <p class="lh-1">Employees</p>
+                </div>
+                <div data-attributes="Auto">
+                  <h3 class="fs-medium m-0">Auto</h3>
+                  <p class="m-0 lh-1">Government Agencies</p>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="lh-1">Investors / Shareholders</p>
+                </div>
+                <div data-attributes="Banking">
+                  <h3 class="fs-medium m-0">Banking</h3>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="m-0 lh-1">Investors / Shareholders</p>
+                  <p class="lh-1">Government Agencies</p>
+                </div>
+                <div data-attributes="Biopharma">
+                  <h3 class="fs-medium m-0">Biopharma</h3>
+                  <p class="m-0 lh-1">Investors / Shareholders</p>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="lh-1">Government Agencies OR Partners </p>
+                </div>
+                <div data-attributes="Capital Markets">
+                  <h3 class="fs-medium m-0">Capital Markets</h3>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="m-0 lh-1">Partners</p>
+                  <p class="lh-1">Government Agencies</p>
+                </div>
+                <div data-attributes="Chemicals">
+                  <h3 class="fs-medium m-0">Chemicals</h3>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="m-0 lh-1">Investors / Shareholders</p>
+                  <p class="lh-1">Government Agencies</p>
+                </div>
+                <div data-attributes="Comms">
+                  <h3 class="fs-medium m-0">Comms</h3>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="m-0 lh-1">Investors / Shareholders</p>
+                  <p class="lh-1">Employees</p>
+                </div>
+                <div data-attributes="Consumer Goods &amp; Services">
+                  <h3 class="fs-medium m-0">Consumer Goods &amp; Services</h3>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="m-0 lh-1">Partners</p>
+                  <p class="lh-1">Investors / Shareholders</p>
+                </div>
+                <div data-attributes="Energy">
+                  <h3 class="fs-medium m-0">Energy</h3>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="m-0 lh-1">Investors / Shareholders</p>
+                  <p class="lh-1">Government Agencies</p>
+                </div>
+                <div data-attributes="Health">
+                  <h3 class="fs-medium m-0">Health</h3>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="m-0 lh-1">Employees</p>
+                  <p class="lh-1">Partners</p>
+                </div>
+                <div data-attributes="High Tech">
+                  <h3 class="fs-medium m-0">High Tech</h3>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="m-0 lh-1">Investors / Shareholders</p>
+                  <p class="lh-1">Partners OR Employees</p>
+                </div>
+                <div data-attributes="Industrial Goods &amp; Equipment">
+                  <h3 class="fs-medium m-0">Industrial Goods &amp; Equipment</h3>
+                  <p class="m-0 lh-1">Investors / Shareholders</p>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="lh-1">Government Agencies</p>
+                </div>
+                <div data-attributes="Insurance">
+                  <h3 class="fs-medium m-0">Insurance</h3>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="m-0 lh-1">Employees</p>
+                  <p class="lh-1">Partners</p>
+                </div>
+                <div data-attributes="Media &amp; Entertainment">
+                  <h3 class="fs-medium m-0">Media &amp; Entertainment</h3>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="m-0 lh-1">Investors / Shareholders</p>
+                  <p class="lh-1">Government Agencies</p>
+                </div>
+                <div data-attributes="MedTech">
+                  <h3 class="fs-medium m-0">MedTech</h3>
+                  <p class="m-0 lh-1">Investors / Shareholders</p>
+                  <p class="m-0 lh-1">Partners</p>
+                  <p class="lh-1">Suppliers</p>
+                </div>
+                <div data-attributes="Natural Resources">
+                  <h3 class="fs-medium m-0">Natural Resources</h3>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="m-0 lh-1">Partners</p>
+                  <p class="lh-1">Employees</p>
+                </div>
+                <div data-attributes="Public Service">
+                  <h3 class="fs-medium m-0">Public Service</h3>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="m-0 lh-1">Government Agencies</p>
+                  <p class="lh-1">Non-Governmental Organizations</p>
+                </div>
+                <div data-attributes="Retail">
+                  <h3 class="fs-medium m-0">Retail</h3>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="m-0 lh-1">Investors / Shareholders</p>
+                  <p class="lh-1">Government Agencies</p>
+                </div>
+                <div data-attributes="Software &amp; Platforms">
+                  <h3 class="fs-medium m-0">Software &amp; Platforms</h3>
+                  <p class="m-0 lh-1">Investors / Shareholders</p>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="lh-1">Government Agencies OR Partners</p>
+                </div>
+                <div data-attributes="Travel">
+                  <h3 class="fs-medium m-0">Travel</h3>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="m-0 lh-1">Investors / Shareholders</p>
+                  <p class="lh-1">Government Agencies OR Employees</p>
+                </div>
+                <div data-attributes="Utilities">
+                  <h3 class="fs-medium m-0">Utilities</h3>
+                  <p class="m-0 lh-1">Customers</p>
+                  <p class="m-0 lh-1">Government Agencies</p>
+                  <p class="lh-1">Investors / Shareholders</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-black h-100 p-2">
+              <h2 class="text-purple fs-semibold"><span class="fs-light">Top</span>3</h2>
+              <p class="text-white">stakeholder groups that <span class="fs-bold"> global executives</span> report exert the most pressure on their organizations to be more transparent with data.</p>
+              <hr>
+              <h3 class="text-white fs-medium mb-3 d-none">COMPARE:</h3>
+              <div class="compare-text-box bg-light text-purple position-relative d-none">
+                <h3 class="text-purple fs-medium mb-3"></h3>
+                <p class="text-purple m-0"></p>
+                <p class="text-purple m-0"></p>
+                <p class="text-purple m-0"></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script> -->
+  <script src="tv23-interactive.js"></script>
+
+
+
+
+</body></html>
